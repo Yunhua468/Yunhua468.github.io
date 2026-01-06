@@ -1,0 +1,177 @@
+/* ===============================
+   MAIN LAYOUT
+   =============================== */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: white;
+}
+
+/* PAGE CONTAINER */
+.page-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== LEFT SIDEBAR ===== */
+.nav-wrapper {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #f2f2f2;
+    border-right: 3px solid #999;
+    padding-top: 20px;
+}
+
+/* SIDEBAR NAVIGATION */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar li.active {
+    background-color: #e6e6e6;
+    font-weight: bold;
+}
+
+.sidebar a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0047ab;
+    text-decoration: none;
+}
+
+/* HOVER EFFECT */
+.sidebar li:hover {
+    background-color: #d9e8ff;
+}
+
+/* ===== RIGHT CONTENT ===== */
+.content {
+    flex: 1;
+    padding: 40px 50px;
+    max-width: 800px;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 25px 0 15px 0;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+/* PARAGRAPHS */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* LINKS */
+a {
+    color: #0047ab;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* BIOCRAPHICAL SKETCH SECTION (for future use) */
+.bio-sketch {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #0047ab;
+}
+
+
+.image-sidebar {
+    width: 300px;
+    padding: 40px 30px;
+    background-color: #f9f9f9;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PROFILE IMAGE */
+.profile-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.profile-image {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.image-caption p {
+    font-size: 12px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.image-caption p:first-child {
+    font-weight: bold;
+    font-size: 12px;
+    color: #333;
+}
+
+/* CONTACT INFO - Now stays under image */
+.contact-info {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 0; /* Removed top margin since it's directly under */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.contact-info h3 {
+    font-size: 18px;
+    color: #0047ab;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.5;
+}

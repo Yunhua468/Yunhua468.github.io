@@ -1,0 +1,352 @@
+/* ===============================
+   MAIN LAYOUT - FIXED WIDTH CONTENT
+   =============================== */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f8f9fa; /* Light gray background for the empty space */
+}
+
+/* PAGE CONTAINER */
+.page-container {
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    justify-content: center; /* Center the content horizontally */
+}
+
+/* ===== LEFT SIDEBAR - COLUMN 1 ===== */
+.nav-wrapper {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #f2f2f2;
+    border-right: 3px solid #999;
+    padding-top: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* SIDEBAR NAVIGATION */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar li.active {
+    background-color: #e6e6e6;
+    font-weight: bold;
+}
+
+.sidebar a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0047ab;
+    text-decoration: none;
+}
+
+/* HOVER EFFECT */
+.sidebar li:hover {
+    background-color: #d9e8ff;
+}
+
+/* ===============================
+   MAIN CONTENT AREA - FIXED WIDTH
+   =============================== */
+
+/* Main container for centered content */
+.main-content-area {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 40px; /* Add padding on sides */
+}
+
+/* ===== MAIN CONTENT COLUMN - FIXED WIDTH ===== */
+.content {
+    width: 800px; /* Fixed width instead of flex: 1 */
+    max-width: 800px;
+    padding: 40px 50px;
+    overflow-y: auto;
+    height: 100vh;
+    background-color: white;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* Subtle shadow for definition */
+}
+
+/* ===============================
+   SERVICE PAGE STYLES
+   =============================== */
+
+/* HEADINGS */
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 30px 0 20px 0;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+/* Service Section */
+.teaching-section {
+    margin-bottom: 40px;
+}
+
+.teaching-section h2 {
+    font-size: 22px;
+    color: #333;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.teaching-section h2 i {
+    color: #0047ab;
+    font-size: 22px;
+}
+
+/* Service Item Styling - NO BULLET POINTS */
+.semester-section {
+    margin-bottom: 20px;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    /* Removed padding-left: 40px; */
+    /* Removed position: relative; */
+}
+
+.service-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 71, 171, 0.1);
+    border-color: #0047ab;
+}
+
+/* REMOVED the bullet point pseudo-element */
+/* .service-item:before {
+    content: "•";
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: #0047ab;
+    font-size: 24px;
+    font-weight: bold;
+} */
+
+.service-title {
+    font-size: 16px;
+    color: #0047ab;
+    margin-bottom: 5px;
+    font-weight: bold;
+    line-height: 1.4;
+    /* Removed any bullet-related positioning */
+}
+
+.service-role {
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+    padding-left: 0; /* Changed from 5px */
+}
+
+/* Add subtle background for different sections */
+.teaching-section:nth-child(odd) .service-item {
+    background-color: #f9f9f9;
+}
+
+.teaching-section:nth-child(even) .service-item {
+    background-color: white;
+}
+
+/* Center the content within the fixed width */
+.content-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Links */
+a {
+    color: #0047ab;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1300px) {
+    .content {
+        width: 750px;
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content {
+        width: 700px;
+        max-width: 700px;
+        padding: 35px 40px;
+    }
+    
+    .main-content-area {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .content {
+        width: 650px;
+        max-width: 650px;
+        padding: 30px 35px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .content {
+        width: 600px;
+        max-width: 600px;
+        padding: 30px;
+    }
+    
+    .main-content-area {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .content {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+    }
+    
+    .main-content-area {
+        padding: 0;
+    }
+    
+    .service-item {
+        padding: 18px; /* Removed padding-left: 35px; */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Switch to single column layout */
+    .page-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .nav-wrapper {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 3px solid #999;
+    }
+    
+    .main-content-area {
+        flex-direction: column;
+        padding: 0;
+        height: auto;
+    }
+    
+    .content {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        padding: 25px;
+    }
+    
+    .service-item {
+        padding: 16px; /* Removed padding-left: 32px; */
+    }
+    
+    .service-title {
+        font-size: 16px;
+    }
+    
+    .service-role {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .teaching-section h2 {
+        font-size: 20px;
+    }
+    
+    .service-item {
+        padding: 14px; /* Removed padding-left: 28px; */
+    }
+}
+
+/* Print styles */
+@media print {
+    .nav-wrapper {
+        display: none;
+    }
+    
+    .content {
+        width: 100%;
+        padding: 20px;
+        border: none;
+        height: auto;
+        overflow: visible;
+        box-shadow: none;
+    }
+    
+    .service-item {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

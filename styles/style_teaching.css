@@ -1,0 +1,398 @@
+/* ===============================
+   MAIN LAYOUT - 3 COLUMNS
+   =============================== */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* PAGE CONTAINER */
+.page-container {
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+/* ===== LEFT SIDEBAR - COLUMN 1 ===== */
+.nav-wrapper {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #f2f2f2;
+    border-right: 3px solid #999;
+    padding-top: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* SIDEBAR NAVIGATION */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar li.active {
+    background-color: #e6e6e6;
+    font-weight: bold;
+}
+
+.sidebar a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0047ab;
+    text-decoration: none;
+}
+
+/* HOVER EFFECT */
+.sidebar li:hover {
+    background-color: #d9e8ff;
+}
+
+/* ===============================
+   MAIN CONTENT AREA - 3 COLUMNS
+   =============================== */
+
+/* Main container for middle and right columns */
+.main-content-area {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ===== MIDDLE COLUMN - Main Content ===== */
+.content {
+    flex: 1;
+    padding: 40px 50px;
+    overflow-y: auto;
+    height: 100vh;
+    border-right: 1px solid #eee;
+    background-color: white;
+}
+
+/* ===== RIGHT COLUMN - Teaching Summary ===== */
+.current-research-column {
+    width: 390px;
+    flex-shrink: 0;
+    padding: 40px 30px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* ===============================
+   TEACHING PAGE STYLES
+   =============================== */
+
+/* HEADINGS */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 25px 0 15px 0;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+/* PARAGRAPHS */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* LINKS */
+a {
+    color: #0047ab;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.teaching-section {
+    margin-bottom: 30px;
+}
+
+.teaching-section h2 {
+    font-size: 20px;
+    color: #333;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.teaching-section h2 i {
+    color: #0047ab;
+    font-size: 22px;
+}
+
+/* Semester Table Styles */
+.semester-section {
+    margin-bottom: 40px;
+}
+
+.semester-title {
+    font-size: 16px;
+    color: #555;
+    background-color: #f5f5f5;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border-left: 4px solid #0047ab;
+}
+
+.semester-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.semester-table th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid #0047ab;
+    font-size: 16px;
+}
+
+.semester-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+.semester-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.semester-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Table columns */
+.course-code {
+    width: 220px;
+    font-weight: bold;
+    color: #0047ab;
+    font-size: 12px;
+}
+
+.course-code a {
+    color: #0047ab;
+}
+
+.course-code a:hover {
+    text-decoration: underline;
+}
+
+.course-institution {
+    width: 150px;
+    color: #666;
+    font-size: 12px;
+}
+
+.course-time {
+    width: 180px;
+    color: #666;
+    font-size: 12px;
+}
+
+.course-location {
+    width: 120px;
+    color: #666;
+    font-size: 12px;
+}
+
+.course-instructor {
+    width: 200px;
+    color: #666;
+    font-size: 12px;
+}
+
+/* Teaching Assistant specific styling */
+
+
+.ta-section .course-code .course-instructor .course-instructor{
+    width: 180px;
+    color: #666;
+    font-size: 12px;
+}
+
+/* Right Column: Teaching Summary */
+.research-section h2 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.research-methods {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+.research-methods h3 {
+    font-size: 18px;
+    color: #0047ab;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.research-methods ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.research-methods li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.research-methods li:before {
+    content: "•";
+    color: #0047ab;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.research-methods li:last-child {
+    border-bottom: none;
+}
+
+.research-methods .metrics {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.research-methods .metrics p {
+    font-size: 15px;
+    margin: 8px 0;
+    color: #555;
+}
+
+.research-methods .metrics strong {
+    color: #0047ab;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1300px) {
+    .current-research-column {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1100px) {
+    /* Switch to 2 columns (nav + combined content) */
+    .main-content-area {
+        flex-direction: column;
+    }
+    
+    .content {
+        flex: none;
+        height: auto;
+        max-height: 60vh;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .current-research-column {
+        width: 100%;
+        height: auto;
+        max-height: 40vh;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Switch to single column layout */
+    .page-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .nav-wrapper {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 3px solid #999;
+    }
+    
+    .main-content-area {
+        flex-direction: column;
+    }
+    
+    .content,
+    .current-research-column {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        padding: 30px;
+    }
+    
+    .content {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 20px;
+    }
+    
+    .current-research-column {
+        padding: 20px;
+    }
+    
+    .semester-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .semester-table th,
+    .semester-table td {
+        white-space: nowrap;
+        min-width: 150px;
+    }
+}

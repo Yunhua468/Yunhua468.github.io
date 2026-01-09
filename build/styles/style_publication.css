@@ -1,0 +1,258 @@
+/* ===============================
+   MAIN LAYOUT
+   =============================== */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: white;
+}
+
+/* PAGE CONTAINER */
+.page-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== LEFT SIDEBAR ===== */
+.nav-wrapper {
+    width: 260px;
+    flex-shrink: 0;
+    background-color: #f2f2f2;
+    border-right: 3px solid #999;
+    padding-top: 20px;
+}
+
+/* SIDEBAR NAVIGATION */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.sidebar li.active {
+    background-color: #e6e6e6;
+    font-weight: bold;
+}
+
+.sidebar a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0047ab;
+    text-decoration: none;
+}
+
+/* HOVER EFFECT */
+.sidebar li:hover {
+    background-color: #d9e8ff;
+}
+
+/* ===== RIGHT CONTENT ===== */
+.content {
+    flex: 1;
+    padding: 40px 50px;
+    max-width: 800px;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 25px 0 15px 0;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+/* PARAGRAPHS */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* LINKS */
+a {
+    color: #0047ab;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===============================
+   PUBLICATIONS PAGE ENHANCEMENTS
+   =============================== */
+
+/* Profile badges at top */
+.profile-badges {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.scholar-badge, .orcid-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.scholar-badge {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    border: 1px solid #d2e3fc;
+}
+
+.scholar-badge:hover {
+    background-color: #d2e3fc;
+    text-decoration: none;
+}
+
+.orcid-badge {
+    background-color: #f0f8e8;
+    color: #a6ce39;
+    border: 1px solid #d9e8b6;
+}
+
+.orcid-badge:hover {
+    background-color: #e1f0c6;
+    text-decoration: none;
+}
+
+/* MAIN CONTENT AREA FLEX SETTINGS */
+.main-content-area {
+    display: flex;
+    flex: 1;
+}
+
+/* Center content - publications */
+.content {
+    flex: 1;
+    padding: 40px 50px;
+    max-width: 700px;
+    border-right: 1px solid #eee;
+}
+
+/* Right Column: Current Research */
+.current-research-column {
+    width: 390px;
+    padding: 40px 30px;
+    background-color: #f9f9f9;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+.research-section h2 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #0047ab;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.research-topic {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.research-topic:hover {
+    box-shadow: 0 4px 12px rgba(0, 71, 171, 0.1);
+    border-color: #0047ab;
+    transform: translateY(-2px);
+}
+
+.research-topic h3 {
+    font-size: 18px;
+    color: #0047ab;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.research-topic h3 i {
+    font-size: 16px;
+    width: 24px;
+    text-align: center;
+}
+
+.research-topic p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.research-methods {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+}
+
+.research-methods h3 {
+    font-size: 12px;
+    color: #0047ab;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.research-methods ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.research-methods li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.research-methods li:before {
+    content: "•";
+    color: #0047ab;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.research-methods li:last-child {
+    border-bottom: none;
+}

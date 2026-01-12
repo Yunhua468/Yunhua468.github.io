@@ -1,7 +1,7 @@
 ## Hi there 👋
-Portfolio links: 
-https://Yunhua468.github.io  
-or  
+Homepage links:     
+https://Yunhua468.github.io    
+or    
 https://portfolio-backend-three-sigma.vercel.app/index.html
 
 <!--
